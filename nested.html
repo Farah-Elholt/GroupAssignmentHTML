@@ -20,6 +20,15 @@
             box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
             background-color: rgb(247, 247, 85);
         }
+        .cody-box {
+            width: 500px;
+            border: 5px solid #3b585f;
+            border-radius: 5px;
+            margin: 10px 10px;
+            padding: 6px;
+            background-color: rgb(145, 106, 106);
+            text-align: center;
+        }
     </style>
 <head>
     <meta charset="utf-8" />
@@ -124,5 +133,51 @@
     </span>
 
 </div>
+
+<!--cody nested tags-->
+<div class="cody-box">
+    <h1>Cody's Nested Tags</h1>
+    <!--1-->
+    <div>
+        <h2>
+           <form>
+            <p>Here is a text area:<textarea id="randomText" name="randomText" rows="4" cols="50">Not much to see here</textarea></p>
+           </form>
+        </h2>
+    </div>
+
+    <!--2-->
+    <h2>
+        <form>
+            <fieldset>
+                <mark>
+                    <legend>x5 Nested Legend (very nice)</legend>
+                </mark>
+            </fieldset>
+        </form>
+    </h2>
+
+    
+    <!--3-->
+        <h2>
+            <form>
+            <fieldset>
+            <p>The nested quote is:
+                <q>Nested quote moment.</q> Thank you for the inspirational words.
+            </p>
+            </fieldset>
+            </form>
+        </h2>
+
+        <!--4-->
+        <h2>Nested hyperlink (very riveting):</h2>
+        <h3>
+            <dl>
+            <dt><p><dfn><a href="https://www.google.com/">This</a></dfn> is a hyperlink to the fountain of knowledge.</p></dt>
+            </dl>
+        </h3>
+
+</div>
+<!--end of cody nesting-->
 </body>
 </html>
