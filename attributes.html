@@ -1,11 +1,48 @@
 ﻿<!DOCTYPE html>
 <html>
+    <style>
+        .noahs-stuff {
+            width: 500px;
+            border: 1px solid #000000;
+            border-radius: 5px;
+            margin: 10px 5px;
+            padding: 4px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+            background-color: rgb(247, 247, 85);
+            text-align: center;
+        }
+    </style>
 <head>
     <meta charset="utf-8" />
     <title></title>
 </head>
 <body>
     <a href=index.html>home</a>
+    <div class="noahs-stuff">
+        <h1>Noah's attributes</h1>
+        <h3>hey</h3>
+        <h3>here's a cool link</h3>
+        <a href="https://play.google.com/store/apps/details?id=com.plarium.raidlegends&hl=en_US&gl=US">
+            <img src="images/unnamed.gif" alt="Congratulations, you've won!" title="You're winner!">
+        </a>
+        <h3 style="font-family: fantasy; color: teal;">did'ya like it?</h3>
+        <h3 style="font-family: fantasy; color: teal;">woah what's</h3>
+        <h3 id="text" style="font-family: Arial Narrow; color: rgb(87, 23, 73); font-size: 30px;" onclick="MyFunction()">happening?</h3>
+        <script>
+            function MyFunction() {
+                document.getElementById("text").style.color = "red";
+            }
+        </script>
+        <h3 style="font-family: cursive; color: green; font-size: 56px">h  e  l  p</h3>
+        <label for="okay">
+            <input type="radio" name=yesno size="1">okay
+        </label>
+        <br>
+        <label for="no">
+            <input type="radio" name=yesno size="1">no
+        </label>
+
+    </div>
     
 
 </body>
