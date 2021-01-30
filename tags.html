@@ -33,6 +33,17 @@
             max-width: 100%;
             height: auto;
         }
+
+        .cody-box {
+            width: 500px;
+            border: 1px solid #000000;
+            border-radius: 5px;
+            margin: 10px 5px;
+            padding: 4px;
+            box-shadow: 0 10px 20px rgba(65, 62, 62, 0.19), 0 6px 6px rgba(69, 112, 141, 0.23);
+            background-color: rgb(145, 106, 106);
+            text-align: center;
+        }
     </style>
     <!--Dylans Code-->
 <audio id="sound1" src="/sounds/Gnome Meme Sound Effect.mp3" preload="auto"></audio>
@@ -88,13 +99,67 @@
 
     <!--======================================CODY CODE START================================================================-->
 
-    <div>
+    <div class="cody-box">
         <h1>
             Cody's Tags
         </h1>
        <small>
-           Small Text
+           We waaaaaaaaaaaaaaaaaaaaay out here
        </small>
+
+       <p>
+           <em>Writing in italian right now</em>
+       </p>
+
+       <h2>Form Test:</h2>
+           <form>
+            <label for="textInput">Just type whatever you want:</label>
+            <input type="text" id="textInput" theText="textInput">
+           </form>
+
+           <h3>Colored Canvas Below:</h3>
+           <canvas id="firstCanvas">
+               
+           </canvas>
+
+           <!--for canvas-->
+           <script>
+            var canvas = document.getElementById("firstCanvas");
+            var ctx = canvas.getContext("2d");
+            ctx.fillStyle = "cyan";
+            ctx.fillRect(0, 0, 200, 200);
+            </script>
+
+           <h3>SVG Element Test</h3>
+            <svg width="50" height="50">
+                <circle cx="5" cy="5" r="40" stroke="red" stroke-width="10" fill="blue" />
+            </svg>
+
+            <h3>Nav Elemenet to Link to Other Pages</h3>
+            <nav>
+                <a href="index.html">To Index</a> |
+                <a href="nested.html">To Nested</a> |
+                <a href="attributes.html">To Attributes</a> |
+            </nav>
+
+            <h3>Descriptive List:</h3>
+            <dl>
+                <dt>You</dt>
+                <dt>got</dt>
+                <dt>punked</dt>
+                <dt><strong>son</strong></dt>
+                <dd>!</dd>
+              </dl>
+
+              <h3>Summary Element:</h3>
+              <summary>synonym</summary>
+              <p>a word or phrase that means exactly or nearly the same as another word or phrase in the same language, for example shut is a synonym of close.</p>
+              <h6>Citation</h6>
+              <p><cite>Google</cite> definitions</p>
+
+              <h3>Lastly, the del tag.</h3>
+              <p>9 + 10 is <del>19</del> <ins>21</ins>!</p>
+        
        
     </div>
 
