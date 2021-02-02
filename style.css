@@ -9,6 +9,7 @@
     display: inline-block;
 }
 
+<<<<<<< HEAD
 .cody-image img{
     height: 100%;
     width: 100%;
@@ -37,3 +38,23 @@
     height: 10%;
     width: 100%;
 }
+=======
+#dylan img
+{
+    text-align: center;
+        align-self: center;
+    height: 50%;
+    width: 50%;
+    border:2px solid black;
+}
+
+#noah {
+    text-align: center;
+}
+.left_text {
+    float: left;
+}
+.right_text {
+    float:right;
+}
+>>>>>>> a67ae3488c9417d11769077891479e237e65c54b
