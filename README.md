@@ -1,7 +1,7 @@
 # GroupAssignmentHTML
 Group Assignment 1: Noah and the bois
 
-Dylan: Primary Tester
-Brandon: Primary Dev
-Cody: Designer
-Noah: PM
+Dylan: Designer
+Brandon: PM
+Cody: Primary Dev
+Noah: Primary Tester
