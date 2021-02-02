@@ -1,16 +1,14 @@
 .card{
     height: 300px;
     width: 200px;
-    background-color: rgba(42,196,231,0.582);
+    background-color: rgba(247, 203, 84, 0.76);
     margin: 20px;
     padding: 20px;
     border: 2px solid black;
     box-shadow: 0 7px 15px 0 rgba(0,0,0,0.659);
     display: inline-block;
 }
-.dylaninner{
 
-}
 #dylan img
 {
     text-align: center;
@@ -20,3 +18,12 @@
     border:2px solid black;
 }
 
+#noah {
+    text-align: center;
+}
+.left_text {
+    float: left;
+}
+.right_text {
+    float:right;
+}
