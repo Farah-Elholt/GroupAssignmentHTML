@@ -11,3 +11,9 @@
 #noah {
     text-align: center;
 }
+.left_text {
+    float: left;
+}
+.right_text {
+    float:right;
+}
