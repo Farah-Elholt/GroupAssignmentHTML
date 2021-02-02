@@ -48,6 +48,7 @@
 
 #noah {
     text-align: center;
+    background-image: url("images/original.gif");
 }
 .left_text {
     float: left;
