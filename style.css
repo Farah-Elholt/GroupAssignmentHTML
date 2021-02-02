@@ -8,3 +8,23 @@
     box-shadow: 0 7px 15px 0 rgba(0,0,0,0.659);
     display: inline-block;
 }
+
+.cody-image img{
+    height: 100%;
+    width: 100%;
+    padding: 0px 0px 30px 0px;
+
+}
+.cody-inner-box{
+    height: 175px;
+    width: 150px;
+    background-color: rgba(197, 62, 29, 0.582);
+    margin: 10px 10px 15px 4px;
+    padding: 20px;
+    border: 2px solid black;
+}
+.cody-inner {
+    text-align: center;
+    font-weight:bold;
+    font-size:large;
+}
