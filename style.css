@@ -9,6 +9,7 @@
     display: inline-block;
 }
 .bcard{
-    height: 100%;
+    border: 2px solid orangered;
+    height: 10%;
     width: 100%;
 }
