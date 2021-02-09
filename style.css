@@ -62,7 +62,7 @@ body{
     border: 1px solid #f1f1f1;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
     display:inline-block;
-    margin-left: auto;
+    margin-left: 200px;
     margin-right: auto;
     
 }
