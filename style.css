@@ -203,7 +203,7 @@
 /*Classy*/
 .noah-page {
     background-color: maroon;
-    overflow: hidden;
+    /* overflow: hidden; */
     background-image: url(images/pngkey.com-persona-5-joker-png-3785108.png);
     background-position: -1px 600px;
     background-repeat: no-repeat;
@@ -228,15 +228,26 @@
     padding: 4px;
     /*box-shadow: 0 10px 20px rgba(0, 0, 0, 50), 0 6px 6px rgba(255, 255, 255, 0.23);*/
     background-color: rgb(0, 0, 0);
+}
+#dog-picture {
+    width: 300px;
+}
+#noah-body p{
+    font-size: 40px;
+}
+#noah-body ul{
     text-align: center;
+    list-style-position: inside;
+    width: 85%;;
 }
 /*Animate your heart!*/
 #white-circle1 {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    position:absolute;
-    right: -5%;
+    position:fixed;
+    right: -6%;
+    top: 60%;
     background-color: white;
     animation-name: expand-right;
     animation-duration: 3s;
@@ -247,9 +258,9 @@
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    position:absolute;
-    left: -5%;
-    top: 30%;
+    position:fixed;
+    left: -6%;
+    top: 25%;
     background-color: white;
     animation-name: expand-left;
     animation-duration: 3s;
@@ -262,7 +273,8 @@
     height: 100px;
     border-radius: 50%;
     position: fixed;
-    right: -5%;
+    right: -6%;
+    top: 60%;
     background-color: black;
     animation-name: expand-right;
     animation-duration: 3s;
@@ -275,8 +287,8 @@
     height: 100px;
     border-radius: 50%;
     position: fixed;
-    left: -5%;
-    top: 30%;
+    left: -6%;
+    top: 25%;
     background-color: black;
     animation-name: expand-left;
     animation-duration: 3s;
