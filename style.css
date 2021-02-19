@@ -334,6 +334,69 @@
 }
 
 /*========================================== No more Noah from here on out =================================================*/
+
+/*Cody's Code Starts Here*/
+#randomtext{
+    padding: 10px;
+    text-align:center;
+}
+
+#cody-h1{
+
+    font-weight:bolder;
+    text-align: center;
+    font-size: 60px;
+
+}
+
+#cody-smalltext{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 10px;
+}
+
+#cody-h2{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 48px;
+    background-color:white;
+    margin-left: 120px;
+    margin-right: 120px;
+}
+
+#firstCanvas{
+    padding-left: 100px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#cody-nav-el{
+    font-size: 32px;
+    text-shadow:black;
+}
+
+dl{
+    padding: 10px 10px 10px 10px;
+
+}
+
+#very-strong{
+    text-shadow:white;
+    font-family:'Times New Roman', Times, serif;
+}
+
+#thisTheSummary{
+    font-weight: bold;
+    font-size: 30px;
+    margin: 10px;
+    font-family:'Courier New', Courier, monospace;
+}
+
+#summPar{
+    font-size: 20px;
+    font-family:'Courier New', Courier, monospace;
+    margin: 10px;
+}
+
+/*Cody's code ends here*/
 .card{
     height: 300px;
     width: 200px;
