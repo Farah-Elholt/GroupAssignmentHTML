@@ -496,3 +496,52 @@ dl{
 .right_text {
     float:right;
 }
+
+/*Brandon*/
+#banimation {
+    width: 500px;
+    height: 500px;
+    background-color: red;
+    position: relative;
+    animation-name: example;
+    animation-duration: 30s;
+    transform-origin: bottom right;
+  }
+  
+  @keyframes example {
+     0%   {background-color:red; left:0px; top:0px;}
+    10%  {background-color:yellow; transform: rotate(90deg)}
+    20%  {background-color:blue; left:200px; top:200px;}
+    30%  {background-color:green; left:0px; top:200px;}
+     40%   {background-color:purple; left:0px; top:0px;}
+    50%  {background-color:yellow; transform: rotate(90deg)}
+    60%  {background-color:blue; left:200px; top:200px;}
+    70%  {background-color:green; left:0px; top:200px;}
+     80%   {background-color:red; left:0px; top:0px;}
+    90%  {background-color:white; transform: rotate(90deg)}
+    100%  {background-color:red; left:200px; top:200px;}
+  }
+  #bbody{
+      border: 5pt solid black;
+      width: 98vw;
+      height: 60vh;
+      background-color: paleturquoise;
+      text-align: center;
+  }
+  .bimages{
+        padding: 20px;
+        width: 20vw;
+        height: auto;
+  }.bimages2{
+    padding: 20px;
+    width: 10vw;
+    height: auto;
+}
+a h1{
+    color: black;
+    
+}
+a{
+    text-decoration-line: none;
+    text-decoration: none;
+}
