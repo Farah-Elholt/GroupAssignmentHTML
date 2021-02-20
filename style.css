@@ -56,7 +56,7 @@
 }
 /*===================================== DYLAN'S CODE ================================================*/
 /* Dylan's CSS Animation*/
-.flip-box {
+#Body .flip-box {
     background-color: transparent;
     width: 200px;
     height: 270px;
@@ -65,6 +65,16 @@
     display:inline-block;
     margin-left: 200px;
     margin-right: auto;
+}
+.flip-box {
+    background-color: transparent;
+    width: 250px;
+    height: 320px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px;
+    display:inline-block;
+    /*margin-left: 200px;
+    margin-right: auto;*/
 }
   .flip-box-inner {
     position: relative;
@@ -153,17 +163,30 @@
     #sec1text{
     float:left;
     }
-    
+    /* Combined decleration syntax*/
     #sec1text h1{
         text-decoration: underline;
     }
+    /* Combined decleration syntax*/
+    #sec1text h3{
+    font-style: italic;
+    }
+    /* Combined decleration syntax*/
+    #sec1text h4{
+        color: cadetblue;
+    }
+    /* Combined decleration syntax*/
+    #sec1text p{
+        size: 16px;
+    }
 
-#sec1images{
-    float: right;
-    overflow: hidden;
-    border: black;
-    border-style: solid;   
-    border-width: 5px;
+#sec1images .flip-box{
+ float: right;
+ border: black;
+ border-style: solid; 
+ border-width: 5px;
+    /*overflow: hidden;
+    */
 }
 #dylansec2{
     background-color:white;
@@ -182,7 +205,7 @@
         padding-right: 30%;
     }
 
-    
+    /* Combined decleration syntax*/
     #sec2images img{
         border: black;
         border-style: solid;   
@@ -232,9 +255,15 @@
 #dog-picture {
     width: 300px;
 }
+
+
+/* Combined decleration syntax*/
 #noah-body p{
     font-size: 40px;
 }
+
+
+/* Combined decleration syntax*/
 #noah-body ul{
     text-align: center;
     list-style-position: inside;
