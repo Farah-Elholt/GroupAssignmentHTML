@@ -360,11 +360,11 @@
         height: 100px;
         opacity: 1;
     }
-    /*75% {
+    75% {
         width: 400px;
         height: 400px;
         opacity: 1;
-    }*/
+    }
     100% {
         width: 550px;
         height: 550px;
