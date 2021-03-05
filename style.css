@@ -1,4 +1,17 @@
 
+.dropdown-menu{
+    border-width: 10px;
+    border-style: solid;
+    border-color: black;
+}
+.footer{
+    background-color: #359191;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
 #header{
     background-color:#359191;
     border-radius: 20px;
@@ -17,8 +30,7 @@
     background-color: rgb(136, 135, 135);
     border-radius: 10px;
     padding: 0.5rem 0;
-    overflow: hidden; 
-}
+    }
 
     #header nav ul {
         text-align: center;
