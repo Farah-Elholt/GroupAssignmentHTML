@@ -19,13 +19,15 @@ var roulleteNumbers = new Array();
      0 & 00 = 0
      1 = ODD
      2 = EVEN 
+
+     Other data types will be added once more funcitonality is achieved
      */
 
     
-roulleteNumbers[0] =  [0, 0, 0];
-roulleteNumbers[1] =  [1, 1, 1];
-roulleteNumbers[2] =  [2, 2, 2];
-roulleteNumbers[3] =  [3, 1, 1];
+roulleteNumbers[0] =  [0, 0, 0]; // Zero, Green, neither odd or even
+roulleteNumbers[1] =  [1, 1, 1]; // One, Red, Odd
+roulleteNumbers[2] =  [2, 2, 2]; // Two, Black, Even
+roulleteNumbers[3] =  [3, 1, 1]; // Three, Red, Odd
 
 var roll = Math.floor(Math.random()*3);
 
