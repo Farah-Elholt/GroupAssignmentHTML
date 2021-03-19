@@ -22,7 +22,6 @@ var roulleteNumbers = new Array();
 
      Other data types will be added once more funcitonality is achieved
      */
-
     
 roulleteNumbers[0] =  [0, 0, 0]; // Zero, Green, neither odd or even
 roulleteNumbers[1] =  [1, 1, 1]; // One, Red, Odd
@@ -48,9 +47,12 @@ var playerGuess = 1;
 
 if(playerGuess == correctAnswer){
     console.log("You have guessed correctly");
-    //if the player is correct, their bet amount will multiplied based on their betType and awarded to them
+    //if the player is correct, their bet amount will multiplied based on their betType and awarded to them7
 }
 if(playerGuess != correctAnswer){
     console.log("You have guessed incorrectly");
     //if the player is incorrect, their bet amount will be subtracted
 }
+
+
+
