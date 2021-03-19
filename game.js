@@ -41,7 +41,7 @@ var userBetType;
 var playerGuess;
 
 
-
+// =================== Collecting all the player input =====================
 
 
 function inputSelection() {
@@ -65,9 +65,15 @@ function inputSelection() {
         document.getElementById("Odd").disabled = true;
         document.getElementById("Even").disabled = true;
     }
+    // COLOR 
+    if(document.getElementById("NumberRadio").checked == true){
+        userBetType = 0;
+        document.getElementById("playerNumberGuess").disabled = false;
+    }
     console.log("bet type = ", userBetType);
   }
 
+  //============== Rolling the number generator and checking to see if the player was correct =================
   function rollTheTable(){
       //Red or Black
       if(document.getElementById("Red").checked == true){
@@ -83,17 +89,21 @@ function inputSelection() {
       if(document.getElementById("Even").checked == true){
         playerGuess = 2;
     }
+    // NUMBER
+    if(document.getElementById("NumberRadio").checked == true){
+        playerGuess = parseInt(document.getElementById("playerNumberGuess").value); 
+    }
     console.log("player guess = ", playerGuess);
     //Rolling the table
 
-    var roll = Math.floor(Math.random()*4);
+    var roll = Math.floor(Math.random()*11);
 
     var rolledArray = roulleteNumbers[roll];
     
     var correctAnswer = rolledArray[userBetType];
 
     console.log("correct answer = ", correctAnswer);
-
+  
     if(playerGuess == correctAnswer){
         console.log("You have guessed correctly");
         //if the player is correct, their bet amount will multiplied based on their betType and awarded to them
@@ -102,7 +112,8 @@ function inputSelection() {
         console.log("You have guessed incorrectly");
         //if the player is incorrect, their bet amount will be subtracted
     }
+// ================== END TABLE ROLL ===========================
+
 
 
   }
- 
