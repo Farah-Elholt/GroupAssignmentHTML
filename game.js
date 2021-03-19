@@ -27,32 +27,82 @@ roulleteNumbers[0] =  [0, 0, 0]; // Zero, Green, neither odd or even
 roulleteNumbers[1] =  [1, 1, 1]; // One, Red, Odd
 roulleteNumbers[2] =  [2, 2, 2]; // Two, Black, Even
 roulleteNumbers[3] =  [3, 1, 1]; // Three, Red, Odd
-
-var roll = Math.floor(Math.random()*4);
-
-//At some point this user input it going to change based on what the player wants to bet on (Number, Color, Odd/Even)
-var userBetType = 2;
-
-var rolledArray = roulleteNumbers[roll];
-
-var correctAnswer = rolledArray[userBetType];
-
-/*At this moment we have determined what the correct roll for the roullete table is by identifying the subarray using a random number
-generator, and then selecting a value within that array (number, color, odd/even) based on user input */
-
-//Now we will compare the players guess to the actual roll
-
-var playerGuess = 1;
-//this guess will be parsed from a text box and or radio butten depending on the guess input type. For now it is 1.
-
-if(playerGuess == correctAnswer){
-    console.log("You have guessed correctly");
-    //if the player is correct, their bet amount will multiplied based on their betType and awarded to them
-}
-if(playerGuess != correctAnswer){
-    console.log("You have guessed incorrectly");
-    //if the player is incorrect, their bet amount will be subtracted
-}
+roulleteNumbers[4] =  [4, 2, 2]; // Four, Black, Even
+roulleteNumbers[5] =  [5, 1, 1]; // Five, Red, Odd
+roulleteNumbers[6] =  [6, 2, 2]; // Six, Black, Even
+roulleteNumbers[7] =  [7, 1, 1]; // Seven, Red, Odd
+roulleteNumbers[8] =  [8, 2, 2]; // Eight, Black, Even
+roulleteNumbers[9] =  [9, 1, 1]; // Nine, Red, Odd
+roulleteNumbers[10] = [10, 2, 2]; // Ten, Black, Even
 
 
 
+var userBetType;
+var playerGuess;
+
+
+
+
+
+function inputSelection() {
+    //COLOR
+    if(document.getElementById("color").checked == true){
+        userBetType = 1;
+        document.getElementById("Black").disabled = false;
+        document.getElementById("Red").disabled = false;
+    }
+    else{
+        document.getElementById("Black").disabled = true;
+        document.getElementById("Red").disabled = true;
+    }
+    // ODD OR EVEN
+    if(document.getElementById("OddEven").checked == true){
+        userBetType = 2;
+        document.getElementById("Odd").disabled = false;
+        document.getElementById("Even").disabled = false;
+    }
+    else{
+        document.getElementById("Odd").disabled = true;
+        document.getElementById("Even").disabled = true;
+    }
+    console.log("bet type = ", userBetType);
+  }
+
+  function rollTheTable(){
+      //Red or Black
+      if(document.getElementById("Red").checked == true){
+        playerGuess = 1;
+      }
+      if(document.getElementById("Black").checked == true){
+        playerGuess = 2;
+    }
+    //Odd or Even
+    if(document.getElementById("Odd").checked == true){
+        playerGuess = 1;
+      }
+      if(document.getElementById("Even").checked == true){
+        playerGuess = 2;
+    }
+    console.log("player guess = ", playerGuess);
+    //Rolling the table
+
+    var roll = Math.floor(Math.random()*4);
+
+    var rolledArray = roulleteNumbers[roll];
+    
+    var correctAnswer = rolledArray[userBetType];
+
+    console.log("correct answer = ", correctAnswer);
+
+    if(playerGuess == correctAnswer){
+        console.log("You have guessed correctly");
+        //if the player is correct, their bet amount will multiplied based on their betType and awarded to them
+    }
+    if(playerGuess != correctAnswer){
+        console.log("You have guessed incorrectly");
+        //if the player is incorrect, their bet amount will be subtracted
+    }
+
+
+  }
+ 
