@@ -6,6 +6,15 @@
       height: 250px;
       background-color: red;
     }
+    #secret{
+      height: 20px;
+      width: 200px;
+      
+    }
+    #response{
+      color:white;
+    }
+
   </style>
     <head>
     <script src="random.js"></script>
@@ -18,16 +27,31 @@
 
     <div>
      <!--Code for a button to change an html element-->   
+     <h2>Changing an HTML Element with Javascript</h2>
      <p><button onclick="changeElement()">Click Me to Change the HTML Element!</button></p>
      <div id = "textToChange">I will be changed.</div>
     </div>
+    <br><br>
 
     <div>
       <!--Code for button to change CSS element-->
+      <h2>Changing a CSS Element with Javascript</h2>
       <p><button onclick= "changeCSS()">Click me to change a CSS Element!</button></p>
 
       <div id = "cssToChange"></div>
 
+
+    </div>
+    <br><br><br>
+
+    <div>
+      <!--Code for text box and button-->
+      <h2>Text Input with a Button</h2>
+      <label for="secret">Enter your darkest secrets:</label>
+      <input type="text" id="secret" name="secret"><br>
+      <br>
+      <p><button onclick="submitText()">Submit</button></p>
+      <div><p id = "response">Your dark secrets have been saved.</p></div>
 
     </div>
 

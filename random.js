@@ -17,3 +17,13 @@ function changeElement() {
               
           }      
   }
+
+  function submitText() {
+      var x = document.getElementById("secret");
+      var y = document.getElementById("response");
+      x.value = "";
+      if (y.style.color = "white") {
+          y.style.color = "black";
+      }
+
+  }
