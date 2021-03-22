@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <script src="random.js"></script>
+    <title>Random HTML Page</title>
+    <h1>Random HTML (with Javascript)</h1>
+    
+    </head>
+    
+    <body>
+
+     <!--Code for a button to change an html element-->   
+     <p><button onclick="changeElement()">Click Me to Change the Element</button></p>
+     <div id = "textToChange">I will be changed.</div>
+     <script>
+        function changeElement() {
+          var x = document.getElementById("textToChange");
+          if (x.innerHTML === "I will be changed.") {
+            x.innerHTML = "I have changed.";
+          } else {
+            x.innerHTML = "I will be changed.";
+          }
+        }
+        </script>
+
+    </body>
+
+
+
+</html>
