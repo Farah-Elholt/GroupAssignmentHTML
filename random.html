@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html>
+  <style>
+    #cssToChange {
+      width: 300px;
+      height: 250px;
+      background-color: red;
+    }
+  </style>
     <head>
     <script src="random.js"></script>
     <title>Random HTML Page</title>
@@ -9,19 +16,20 @@
     
     <body>
 
+    <div>
      <!--Code for a button to change an html element-->   
-     <p><button onclick="changeElement()">Click Me to Change the Element</button></p>
+     <p><button onclick="changeElement()">Click Me to Change the HTML Element!</button></p>
      <div id = "textToChange">I will be changed.</div>
-     <script>
-        function changeElement() {
-          var x = document.getElementById("textToChange");
-          if (x.innerHTML === "I will be changed.") {
-            x.innerHTML = "I have changed.";
-          } else {
-            x.innerHTML = "I will be changed.";
-          }
-        }
-        </script>
+    </div>
+
+    <div>
+      <!--Code for button to change CSS element-->
+      <p><button onclick= "changeCSS()">Click me to change a CSS Element!</button></p>
+
+      <div id = "cssToChange"></div>
+
+
+    </div>
 
     </body>
 
