@@ -19,6 +19,7 @@
     <head>
     <script src="random.js"></script>
     <title>Random HTML Page</title>
+    <link rel="stylesheet" href="style.css">
     <h1>Random HTML (with Javascript)</h1>
     
     </head>
@@ -52,6 +53,33 @@
       <br>
       <p><button onclick="submitText()">Submit</button></p>
       <div><p id = "response">Your dark secrets have been saved.</p></div>
+
+    </div>
+
+    <br><br>
+
+    <!--Random number generator from a range-->
+    <div>
+      <h1 id = "textHeaderCards">Random Number Generator</h1>
+      <br>
+
+      <h2 style = "font-size: 25px; text-align: center">Enter one number in the first box and one in the second to get a random number between the two!</h2>
+      <label for="numInput1">Enter the minimum number:</label>
+      <input type="text" id="numInput1" name="numInput1">
+
+      <br><br>
+
+      <label for="numInput2">Enter the maximum number:</label>
+      <input type="text" id="numInput2" name="numInput2">
+
+      <br><br>
+
+      <button onclick="generateNum()">Generate!</button>
+
+      <br><br>
+
+      <label id = "resultLabel" for="result"></label>
+
 
     </div>
 
