@@ -40,6 +40,10 @@
             box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
             text-align: center;
         }
+
+        #elementToChange{
+            font-size: 50px;
+        }
     </style>
 <head>
     <link rel = 'stylesheet' type='text/css' href='style.css'>
@@ -47,22 +51,36 @@
     <title></title>
 </head>
 <body>
-    <ul>
-        <li><a class="active" href=index.html>Home</a></li>
-        <li><a href=nested.html>Nested examples</a></li>
-        <li><a href=attributes.html>Attribute examples</a></li>
-        <li><a href=tags.html>Tag examples</a></li>
-        <li><a href=noah.html>Noahs’s page</a></li>
-        <li><a href=dylan.html>Dylan’s page</a></li>
-        <li><a href=brandon.html>Brandon’s page</a></li>
-        <li><a href=cody.html>Cody’s page</a></li>
-        <br>
-        <br>
-        <br>
-        <li><a href=cards.html>Cards page</a></li>
-       
-        <li><a href=styles.html>Styles page</a></li>
-    </ul>
+    <header id="header">
+        <h1>Noah and the Boys</h1>
+        <nav id="NavBar">
+            <ul>
+                <li><a class="active" href=index.html>Home</a></li>
+                <li><a href=nested.html>Nested examples</a></li>
+                <li><a href=attributes.html>Attribute examples</a></li>
+                <li><a href=tags.html>Tag examples</a></li>
+                <li><a href=noah.html>Noahs’s page</a></li>
+                <li><a href=dylan.html>Dylan’s page</a></li>
+                <li><a href=brandon.html>Brandon’s page</a></li>
+                <li><a href=cody.html>Cody’s page</a></li>
+                <br>
+                <br>
+                <br>
+                <li><a href=cards.html>Cards page</a></li>
+               
+                <li><a href=styles.html>Styles page</a></li>
+            </ul>
+        </nav>
+    </header>
+    <br><br>
+    <h1 id = "elementToChange">Nested Attributes Page</h1>
+    <!--Code to change element with script tag 2-->
+    <script>
+        document.getElementById("elementToChange").style.textAlign = "center";
+    </script>
+
+
+    <br>
     
     <!--------------------------------------------Dylans code----------------------------------------------->
 <div class="dylans-stuff"> 

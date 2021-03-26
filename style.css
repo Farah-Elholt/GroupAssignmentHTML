@@ -508,6 +508,11 @@ dl{
       width: 180%;
     }
   }
+
+  #textHeaderCards{
+      text-align: center;
+      font-size: 50px;
+  }
 /*Cody's code ends here*/
 .card{
     height: 300px;
