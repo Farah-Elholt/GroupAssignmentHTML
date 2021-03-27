@@ -82,11 +82,12 @@ var numberMultiplier = 37;
 var currentMultiplier;
 var winnings;
 
+
 // =================== Collecting all the player input =====================
 function betButton() {
     playerBet = parseInt(document.getElementById("playerBetInput").value);
 
-    if (0 >= userDollars - playerBet) {
+    if (0 > userDollars - playerBet) {
         console.log("Bet amount too high");
         window.alert("Bet amount is too high, please lower your bet.")
         document.getElementById("playerBetInput").value = "";
@@ -178,12 +179,13 @@ if (playerGuess == correctAnswer) {
 
     console.log("You have guessed correctly");
     document.getElementById("resultBox").innerHTML = roll;
-    document.getElementById("resultBox2").innerHTML = "You have guessed correctly", winnings;
+    document.getElementById("resultBox2").innerHTML = "You have guessed correctly. You won: " + winnings;;
+    document.getElementById("resultBox3").innerHTML = "You have: " + userDollars;
 
-    console.log("Current Winnings:", winnings);
-    console.log("New User Dollars:", userDollars)
+    console.log("Current Winnings: "+ winnings);
+    console.log("New User Dollars: " + userDollars)
 
-
+    resetButton();
     //if the player is correct, their bet amount will multiplied based on their betType and awarded to them
 
 
@@ -192,13 +194,14 @@ if (playerGuess == correctAnswer) {
 if (playerGuess != correctAnswer) {
     console.log("You have guessed incorrectly");
     document.getElementById("resultBox").innerHTML = roll;
-    document.getElementById("resultBox2").innerHTML = "You have guessed incorrectly", userDollars;
-
+    document.getElementById("resultBox2").innerHTML = "You have guessed incorrectly.";
+    document.getElementById("resultBox3").innerHTML = "You have: " + userDollars;
     //if the player is incorrect, their bet amount will be subtracted
 
     
 
-    console.log("New User Dollars:", userDollars)
+    console.log("New User Dollars: " +userDollars)
+    resetButton();
 }
 // ================== END TABLE ROLL ===========================
     
@@ -235,6 +238,6 @@ if (playerGuess != correctAnswer) {
 
     document.getElementById("playerNumberGuess").value = "";
     
-    document.getElementById("resultBox").innerHTML = "";
-    document.getElementById("resultBox2").innerHTML = "";
+    //document.getElementById("resultBox").innerHTML = "";
+    //document.getElementById("resultBox2").innerHTML = "";
     }
