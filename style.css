@@ -513,6 +513,20 @@ dl{
       text-align: center;
       font-size: 50px;
   }
+
+  #cssToChange {
+    width: 300px;
+    height: 250px;
+    background-color: red;
+  }
+  #secret{
+    height: 20px;
+    width: 200px;
+    
+  }
+  #response{
+    color:white;
+  }
 /*Cody's code ends here*/
 .card{
     height: 300px;
