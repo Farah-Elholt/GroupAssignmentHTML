@@ -85,22 +85,24 @@ var winnings;
 
 // =================== Collecting all the player input =====================
 function betButton() {
-    playerBet = parseInt(document.getElementById("playerBetInput").value);
-
-    if (0 > userDollars - playerBet) {
-        console.log("Bet amount too high");
-        window.alert("Bet amount is too high, please lower your bet.")
-        document.getElementById("playerBetInput").value = "";
-        playerBet = 0;
+    var str = document.getElementById("playerBetInput").value
+    if(str===""){
+        console.log("hello I am empty");
+        return;
+    }else{
+        playerBet = parseInt(document.getElementById("playerBetInput").value);
+        if (0 > userDollars - playerBet) {
+            console.log("Bet amount too high");
+            window.alert("Bet amount is too high, please lower your bet.")
+            document.getElementById("playerBetInput").value = "";
+            playerBet = 0;
+        }
+        else {
+            userDollars = userDollars - playerBet;
+            document.getElementById("resultBox3").innerHTML = "You have: " + userDollars;
+            document.getElementById("playerBetInput").disabled = true;
+        }
     }
-    else {
-        userDollars = userDollars - playerBet;
-        document.getElementById("playerBetInput").disabled = true;
-    }
-
-    console.log(playerBet, userDollars);
-
-
 }
 
 
@@ -125,7 +127,7 @@ function inputSelection() {
         document.getElementById("Odd").disabled = true;
         document.getElementById("Even").disabled = true;
     }
-    // COLOR 
+    // number
     if (document.getElementById("NumberRadio").checked == true) {
         userBetType = 0;
         document.getElementById("playerNumberGuess").disabled = false;
@@ -136,78 +138,57 @@ function inputSelection() {
 //============== Rolling the number generator and checking to see if the player was correct =================
 
 function rollTheTable() {
-    
-//Red or Black
-if (document.getElementById("Red").checked == true) {
-    playerGuess = 1;
-    currentMultiplier = colorMultiplier;
-}
-if (document.getElementById("Black").checked == true) {
-    playerGuess = 2;
-    currentMultiplier = colorMultiplier;
-}
-//Odd or Even
-if (document.getElementById("Odd").checked == true) {
-    playerGuess = 1;
-    currentMultiplier = oddevenMultiplier;
-}
-if (document.getElementById("Even").checked == true) {
-    playerGuess = 2;
-    currentMultiplier = oddevenMultiplier;
-}
-// NUMBER
-if (document.getElementById("NumberRadio").checked == true) {
-    playerGuess = parseInt(document.getElementById("playerNumberGuess").value);
-    currentMultiplier = numberMultiplier;
-}
-console.log(currentMultiplier);
-console.log("player guess = ", playerGuess);
-//Rolling the table
+    if(userBetType===0||userBetType==1||userBetType==2){
+        //Red or Black
+        if (document.getElementById("Red").checked == true) {
+            playerGuess = 1;
+            currentMultiplier = colorMultiplier;
+        }
+        if (document.getElementById("Black").checked == true) {
+            playerGuess = 2;
+            currentMultiplier = colorMultiplier;
+        }
+        //Odd or Even
+        if (document.getElementById("Odd").checked == true) {
+            playerGuess = 1;
+            currentMultiplier = oddevenMultiplier;
+        }
+        if (document.getElementById("Even").checked == true) {
+            playerGuess = 2;
+            currentMultiplier = oddevenMultiplier;
+        }
+        // NUMBER
+        if (document.getElementById("NumberRadio").checked == true) {
+            playerGuess = parseInt(document.getElementById("playerNumberGuess").value);
+            currentMultiplier = numberMultiplier;
+        }
+        //Rolling the table
+        var roll = Math.floor(Math.random() * 37);
+        var rolledArray = roulleteNumbers[roll];
+        var correctAnswer = rolledArray[userBetType];
+        
+        if (playerGuess == correctAnswer) {
+            console.log("hello I should not be here");
+            winnings = playerBet * currentMultiplier;
+            userDollars += winnings;
 
-var roll = Math.floor(Math.random() * 37);
-
-var rolledArray = roulleteNumbers[roll];
-
-var correctAnswer = rolledArray[userBetType];
-
-console.log("correct answer = ", correctAnswer);
-
-if (playerGuess == correctAnswer) {
-    
-    winnings = playerBet * currentMultiplier;
-    userDollars = userDollars + winnings;
-
-    console.log("You have guessed correctly");
-    document.getElementById("resultBox").innerHTML = roll;
-    document.getElementById("resultBox2").innerHTML = "You have guessed correctly. You won: " + winnings;;
-    document.getElementById("resultBox3").innerHTML = "You have: " + userDollars;
-
-    console.log("Current Winnings: "+ winnings);
-    console.log("New User Dollars: " + userDollars)
-
-    resetButton();
-    //if the player is correct, their bet amount will multiplied based on their betType and awarded to them
-
-
-
-}
-if (playerGuess != correctAnswer) {
-    console.log("You have guessed incorrectly");
-    document.getElementById("resultBox").innerHTML = roll;
-    document.getElementById("resultBox2").innerHTML = "You have guessed incorrectly.";
-    document.getElementById("resultBox3").innerHTML = "You have: " + userDollars;
-    //if the player is incorrect, their bet amount will be subtracted
-
-    
-
-    console.log("New User Dollars: " +userDollars)
-    resetButton();
-}
-// ================== END TABLE ROLL ===========================
+            document.getElementById("resultBox").innerHTML = roll;
+            document.getElementById("resultBox2").innerHTML = "You have guessed correctly. You won: " + winnings;;
+            document.getElementById("resultBox3").innerHTML = "You have: " + userDollars;
+            resetButton();
+            //if the player is correct, their bet amount will multiplied based on their betType and awarded to them
+        }else{
+            document.getElementById("resultBox").innerHTML = roll;
+            document.getElementById("resultBox2").innerHTML = "You have guessed incorrectly.";
+            document.getElementById("resultBox3").innerHTML = "You have: " + userDollars;
+            //if the player is incorrect, their bet amount will be subtracted
+            resetButton();
+        }
+        // ================== END TABLE ROLL ===========================
+            
     
     
-    
-
+    }
 }
 
 
@@ -216,6 +197,7 @@ if (playerGuess != correctAnswer) {
     
     playerBet = 0;
     playerGuess = null;
+    userBetType = 4;
     roll = 0;
 
 
@@ -237,6 +219,7 @@ if (playerGuess != correctAnswer) {
     document.getElementById("Even").disabled = true;
 
     document.getElementById("playerNumberGuess").value = "";
+    document.getElementById("playerNumberGuess").disabled = true;
     
     //document.getElementById("resultBox").innerHTML = "";
     //document.getElementById("resultBox2").innerHTML = "";
