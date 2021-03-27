@@ -1,3 +1,8 @@
+var result = 0;
+var buttonCheck = true;
+
+
+
 //Changes html element
 function changeElement() {
     var x = document.getElementById("textToChange");
@@ -28,12 +33,50 @@ function changeElement() {
   }
 
   function generateNum() {
-    var num1 = document.getElementById('numInput1').value;
-    var num2 = document.getElementById('numInput2').value;
+    var num1 = parseInt(document.getElementById('numInput1').value);
+    var num2 = parseInt(document.getElementById('numInput2').value);
 
-    min = Math.ceil(num1);
-    max = Math.floor(num2);
-    var result =  Math.ceil(Math.random() * (num2 - num1 + 1));
-
+    //min = Math.floor(num1);
+    //max = Math.ceil(num2);
+    result = Math.floor(Math.random()*(num2-num1+1)+num1);
+  
     document.getElementById("resultLabel").innerHTML = result.toString();
+    
+    var buttonCheck = false;
   }
+  
+
+  function displayElements() {    
+
+    for (i = 0; i < result; i++){
+    var para = document.createElement("div");
+    //random color
+    para.style.color = '#'+ Math.floor(Math.random()*16777215).toString(16);
+    //random string
+    var node = document.createTextNode(makeid(result));
+    //random font size
+    para.style.fontSize = Math.floor((Math.random() * 80) + 3)+"px";
+
+
+    para.appendChild(node);
+    var element = document.getElementById("structureDiv");
+    element.appendChild(para);
+    }
+    
+  }
+
+
+  function generateRandomColor()
+{
+    var randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
+    return randomColor;
+}
+function makeid(length) {
+  var letters = '';
+  var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  var charactersLength = characters.length;
+  for ( var i = 0; i < length; i++ ) {
+     letters += characters.charAt(Math.floor(Math.random() * charactersLength));
+  }
+  return letters;
+}
